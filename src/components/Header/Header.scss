@@ -1,0 +1,132 @@
+@import "../../theme/variables";
+@import "../../theme/font";
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: $secondary;
+  padding: 10px 50px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(99, 114, 130, 0.15);
+  box-shadow: 0 1px 4px 0 rgba(99, 114, 130, 0.15);
+}
+
+header.false {
+  display: none !important;
+}
+
+header.true {
+  display: block;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  .left-section {
+    display: flex;
+    align-items: center;
+    .logo-wrapper {
+      width: 70px;
+      height: 70px;
+      img {
+        max-width: 90%;
+        transform: rotate(-20deg);
+      }
+    }
+    .app-name {
+      color: $primary-light;
+      padding: 0 5px;
+      font-size: 22px;
+      font-weight: 400;
+      font-family: $header-font;
+    }
+  }
+  .right-section {
+    .user-profile-wrapper {
+      position: relative;
+      cursor: pointer;
+      .dropOut .triangle {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -8px;
+        right: 20px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid $primary-light;
+      }
+      .dropdownContain {
+        width: 160px;
+        position: absolute;
+        z-index: 2;
+        top: 50px;
+        right: 0px;
+      }
+      .dropOut {
+        width: 160px;
+        background: $primary-light;
+        float: left;
+        position: relative;
+        margin-top: 0px;
+        opacity: 0;
+        padding: 20px 0;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+        -webkit-transition: all 0.1s ease-out;
+        -moz-transition: all 0.1s ease-out;
+        -ms-transition: all 0.1s ease-out;
+        -o-transition: all 0.1s ease-out;
+        transition: all 0.1s ease-out;
+      }
+
+      .dropOut .userdetail {
+        font-size: 12px;
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $gray-light;
+        color: grey;
+      }
+      .dropOut ul {
+        padding: 0;
+        margin: 0;
+      }
+      .dropOut ul li {
+        text-align: center;
+        font-size: 12px;
+        margin: 0;
+        padding: 10px;
+        cursor: pointer;
+        list-style-type: none;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-transition: background 0.1s ease-out;
+        -moz-transition: background 0.1s ease-out;
+        -ms-transition: background 0.1s ease-out;
+        -o-transition: background 0.1s ease-out;
+        transition: background 0.1s ease-out;
+      }
+
+      .dropOut ul li:hover {
+        background: $gray-light;
+      }
+    }
+    .avathar-wrapper {
+      width: 60px;
+      height: 60px;
+      img {
+        max-height: 100%;
+      }
+    }
+    .user-profile-wrapper:hover .dropOut {
+      opacity: 1;
+      margin-top: 8px;
+    }
+  }
+}

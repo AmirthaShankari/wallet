@@ -1,0 +1,66 @@
+@import "../../theme/font";
+@import "../../theme/variables";
+
+.account-box-wrapper,
+.account-add-wrapper {
+  width: calc(100% * 1 / 2 - 30px);
+  height: 185px;
+  padding: 30px;
+  margin: 30px 30px 0 0;
+  color: $primary;
+  cursor: pointer;
+  background: $gray-light;
+}
+
+.account-add-wrapper {
+  position: relative;
+  .add-img-wrapper {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.account-box-wrapper {
+  .account-name {
+    font-size: 22px;
+    font-weight: 300;
+  }
+  .account-balance {
+    font-size: 34px;
+    font-weight: 400;
+    font-family: $numeric-font;
+    letter-spacing: 1.5px;
+    margin: 20px 0;
+  }
+  .account-number {
+    font-size: 18px;
+    font-weight: 200;
+    span {
+      letter-spacing: 1.1px;
+      font-family: $numeric-font;
+    }
+  }
+}
+
+.account-box-wrapper:nth-child(1) {
+  background-image: linear-gradient(
+    to right bottom,
+    $gradient-yellow-begin,
+    $gradient-yellow-end
+  );
+}
+
+.account-box-wrapper:nth-child(2) {
+  background-image: linear-gradient(
+    to right bottom,
+    $gradient-blue-begin,
+    $gradient-blue-end
+  );
+}

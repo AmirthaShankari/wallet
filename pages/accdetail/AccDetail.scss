@@ -1,0 +1,21 @@
+@import "../../src/theme/font";
+
+.acct-transc-wrapper {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  .add-btn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+  }
+}
+.curr-bal {
+  text-align: right;
+  font-size: 24px;
+  font-family: $numeric-font;
+}

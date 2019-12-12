@@ -1,0 +1,38 @@
+@import "../../theme/font";
+@import "../../theme/variables";
+
+.transc-wrapper,
+.header {
+  display: flex;
+  align-items: stretch;
+  div {
+    padding: 20px;
+    border-collapse: collapse;
+    word-wrap: break-word;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .transc-time {
+    width: 25%;
+  }
+  .transc-comment {
+    width: 45%;
+  }
+  .transc-amount,
+  .transc-type {
+    width: 15%;
+  }
+  .numeric {
+    font-family: $numeric-font;
+    font-size: 18px;
+  }
+}
+
+.transc-wrapper:nth-child(odd) {
+  background: $gray-light;
+}
+
+.header {
+  color: $primary;
+  background: $secondary;
+}
